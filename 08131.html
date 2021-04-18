@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form id="test-form" action="#0" onsubmit="return false;">
+    <p><label>Name: <input name="name" id="aa"></label></p>
+    <p><label>Email: <input name="email"></label></p>
+    <p><label>Password: <input name="password" type="password"></label></p>
+    <p>Gender: <label><input name="gender" type="radio" value="m" checked> Male</label> <label><input name="gender" type="radio" value="f"> Female</label></p>
+    <p><label>City: <select name="city" id="city">
+    	<option value="BJ" selected>Beijing</option>
+    	<option value="SH">Shanghai</option>
+    	<option value="CD">Chengdu</option>
+    	<option value="XM">Xiamen</option>
+    </select></label></p>
+    <p><button type="submit">Submit</button></p>
+    <input type="button" name="" id="" value="aa" onclick="aw()" />
+</form>
+	</body>
+	<script type="text/javascript">
+		var json={};
+		
+		
+		function aw(){
+			json.name=$('input[name=name]').val();
+			json.email=$('input[name=email]').val();
+			json.password=$('input[name=password]').val();
+			json.gender=$('input[name=gender]:checked').val();
+//			json.city=$('#city option:selected').test();
+//json.city = $('[name=city] option:selected').text();
+			json.city=$('[name=city] option:selected').text();
+//			var city = $('#kanagawa option:selected').text();
+//			json.city = $('#city option:selected').text();
+			json=JSON.stringify(json);
+			console.log(json);
+//		var form=$("test-form");
+//		
+////	var inputs=	form.find('#aa');
+////		alert(inputs.val());
+//		var textval = $("input[name=name]").val(); 
+//		var aa=$
+//		alert(textval);
+		}
+	</script>
+</html>
